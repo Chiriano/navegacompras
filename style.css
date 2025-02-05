@@ -44,6 +44,10 @@ header {
     padding: 10px;
     border-radius: 8px;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Garante que o botão "Comprar" vai para o final */
+    height: 100%; /* Garante que a altura do cartão seja suficiente para o conteúdo */
     transition: transform 0.3s ease;
 }
 
@@ -61,6 +65,7 @@ header {
 .produto h3 {
     font-size: 16px;
     margin: 10px 0;
+    flex-grow: 1; /* Faz com que o nome do produto não afete a posição do botão */
 }
 
 .produto .comprar {
@@ -71,6 +76,7 @@ header {
     border-radius: 5px;
     display: inline-block;
     transition: background-color 0.3s ease;
+    margin-top: 10px; /* Adiciona uma margem entre o nome do produto e o botão */
 }
 
 .produto .comprar:hover {
