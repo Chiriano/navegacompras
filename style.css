@@ -4,6 +4,7 @@ body {
     background-color: #333;
     color: #fff;
     margin: 0;
+    padding: 0;
 }
 
 /* Header */
@@ -26,7 +27,7 @@ header {
 /* Conteúdo dos Produtos */
 .produtos-container {
     display: grid;
-    grid-template-columns: repeat(5, 1fr); /* 5 colunas por linha */
+    grid-template-columns: repeat(5, 1fr); /* 5 colunas por linha no desktop */
     gap: 20px;
     padding: 20px;
 }
@@ -90,4 +91,40 @@ footer .contato a {
 footer .contato img {
     width: 30px;
     height: auto;
+}
+
+/* Media Queries - Responsividade */
+
+/* Para telas pequenas (celular) */
+@media (max-width: 768px) {
+    .produtos-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 colunas no celular */
+    }
+
+    .produto img {
+        height: 200px; /* Ajusta a altura das imagens */
+    }
+
+    #logo img {
+        width: 120px; /* Logo menor no celular */
+    }
+
+    footer .contato img {
+        width: 25px; /* Ícones menores no celular */
+    }
+}
+
+/* Para telas menores (dispositivos móveis em retrato) */
+@media (max-width: 480px) {
+    .produtos-container {
+        grid-template-columns: 1fr; /* 1 coluna no celular */
+    }
+
+    .produto img {
+        height: 180px; /* Ajusta ainda mais a altura das imagens */
+    }
+
+    footer .contato img {
+        width: 20px; /* Ícones ainda menores */
+    }
 }
